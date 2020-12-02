@@ -1,0 +1,2 @@
+- **Disable password feedback**: `$ sudo mv /etc/sudoers.d/0pwdfeedback /etc/sudoers.d/0pwdfeedback.disabled`
+- **Install basics**: `$ sudo apt install python3-venv build-essential git sshfs`
