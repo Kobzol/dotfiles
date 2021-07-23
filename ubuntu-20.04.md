@@ -11,6 +11,7 @@
   $ git config --global user.email <email>
   $ git config --global user.name "Jakub Beránek"
   $ git config --global credential.helper store
+  $ git config --global pull.ff only
   ```
 - **inotify limit**
   ```bash
