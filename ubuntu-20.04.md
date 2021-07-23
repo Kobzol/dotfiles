@@ -12,6 +12,8 @@
   $ git config --global user.name "Jakub Beránek"
   $ git config --global credential.helper store
   $ git config --global pull.ff only
+  (extract keys from old machine https://makandracards.com/makandra-orga/37763-gpg-extract-private-key-and-import-on-different-machine)
+  $ git config --global user.signingkey <key-id>
   ```
 - **inotify limit**
   ```bash
