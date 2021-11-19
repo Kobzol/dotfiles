@@ -6,7 +6,10 @@ profileon ()
   sudo bash -c "echo 0 > /sys/devices/system/cpu/cpu5/online"
   sudo bash -c "echo 0 > /sys/devices/system/cpu/cpu6/online"
   sudo bash -c "echo 0 > /sys/devices/system/cpu/cpu7/online"
+  # Intel
   sudo bash -c "echo 1 > /sys/devices/system/cpu/intel_pstate/no_turbo"
+  # AMD
+  sudo bash -c "echo 0 > /sys/devices/system/cpu/cpufreq/boost"
   sudo cpupower frequency-set --governor performance
 }
 
