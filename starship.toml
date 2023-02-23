@@ -1,10 +1,19 @@
 format = """
+$python\
 $directory\
-[](fg:#DA627D bg:#86BBD8)\
-$git_branch\
-$git_status\
-[ ](fg:#86BBD8)\
+( \\[$git_branch$git_status\\])\
+[\\$ ]()
 """
+
+#format = """
+#$directory\
+#[](fg:#DA627D bg:#86BBD8)\
+#$git_branch\
+#$git_status\
+#[](fg:#86BBD8)\
+#$cmd_duration\
+#[ ]()
+#"""
 
 # $rust\
 # [ ](fg:#86BBD8)\
@@ -15,11 +24,17 @@ command_timeout = 3000
 add_newline = false
 
 [directory]
-style = "bg:#DA627D fg:#FFFFFF"
-format = "[ $path ]($style)"
-#truncation_length = 3
+#style = "bg:#DA627D fg:#FFFFFF"
+style = "bold fg:blue"
+format = "[$path]($style)"
+truncation_length = 1
+truncate_to_repo = false
 #truncation_symbol = "…/"
 fish_style_pwd_dir_length = 2
+
+[cmd_duration]
+format = ' \(took [$duration]($style)\)'
+show_milliseconds = true
 
 [c]
 symbol = " "
@@ -33,12 +48,16 @@ format = '[ $symbol $context ]($style) $path'
 
 [git_branch]
 symbol = ""
-style = "bg:#86BBD8 fg:#FFFFFF"
-format = '[ $branch ]($style)'
+#style = "bg:#86BBD8 fg:#FFFFFF"
+format = '[$branch]($style)'
 
 [git_status]
-style = "bg:#86BBD8"
-format = '[$deleted$renamed$modified$staged$ahead_behind]($style)'
+style = "fg:white"
+format = '([/$staged$deleted$renamed$modified$ahead_behind]($style))'
+deleted = "r"
+staged = "a"
+modified = "u"
+renamed = "m"
 
 [nodejs]
 symbol = ""
@@ -50,3 +69,6 @@ symbol = ""
 style = "bg:#86BBD8 fg:#000000"
 format = '[ $symbol ($version) ]($style)'
 disabled = true
+
+[python]
+format = '[(\($virtualenv\) )]($style)'
