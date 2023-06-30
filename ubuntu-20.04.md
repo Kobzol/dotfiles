@@ -15,6 +15,7 @@
   (extract keys from old machine https://makandracards.com/makandra-orga/37763-gpg-extract-private-key-and-import-on-different-machine)
   $ git config --global user.signingkey <key-id>
   $ git config --global commit.gpgsign true
+  $ git config --global rerere.enabled true
   ```
 - **inotify limit**
   ```bash
