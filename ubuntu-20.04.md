@@ -23,3 +23,9 @@
   $ sudo sysctl -p --system
   ```
   
+- **tmux**
+  ```bash
+  # ~/.tmux.conf
+  set-window-option -g mode-mouse on  # tmux < 2.1
+  setw -g mouse on                    # tmux >= 2.1
+  ```
