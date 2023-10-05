@@ -16,6 +16,7 @@
   $ git config --global user.signingkey <key-id>
   $ git config --global commit.gpgsign true
   $ git config --global rerere.enabled true
+  $ cargo install git-absorb
   ```
 - **inotify limit**
   ```bash
