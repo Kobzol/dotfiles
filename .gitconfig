@@ -10,6 +10,8 @@
         squash = "!f() { git reset --soft \"$(git merge-base HEAD master)\"; }; f"
 [alias]
 	co = checkout
+[alias]
+        repush = "!f() { git add -u && git commit --amend --no-edit && git push --force-with-lease; }; f"
 [rerere]
         enabled = true
 [rebase]
