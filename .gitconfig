@@ -18,3 +18,5 @@
         autosquash = true
 [help]
 	autocorrect = prompt
+[push]
+	autoSetupRemote = true
