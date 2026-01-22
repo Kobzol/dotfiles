@@ -7,9 +7,11 @@
 [alias]
         uncommit = reset --soft HEAD^1
 [alias]
-        squash = "!f() { git reset --soft \"$(git merge-base HEAD master)\"; }; f"
+        squash = "!f() { git reset --soft \"$(git merge-base HEAD main)\"; }; f"
 [alias]
-	co = checkout
+	    co = checkout
+[alias]
+        p = pull
 [alias]
         repush = "!f() { git add -u && git commit --amend --no-edit && git push --force-with-lease; }; f"
 [alias]
