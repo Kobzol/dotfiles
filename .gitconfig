@@ -4,6 +4,8 @@
         ff = only
 [commit]
         gpgsign = true
+[tag]
+        gpgSign = true
 [alias]
         uncommit = reset --soft HEAD^1
 [alias]
